@@ -22,3 +22,14 @@ export function ArrowCapsule({text, className}: {text: string, className?: strin
         </button>
     )
 }
+
+export function ArrowCapsuleTransparent({text, className}: {text: string, className?: string}) {
+    return (
+        <button className={`h-[38px] pl-[28px] pr-[4px] rounded-[32px] 
+                            cursor-pointer text-white ${className}
+                            flex items-center justify-between gap-4 shadow-lg border border-lion-1`}>
+            {text}
+            <Image className="bg-white px-[4px] py-[8.5px] rounded-full" src={"/Arrow.svg"} alt="arrow_icon" width={30} height={20}/>
+        </button>
+    )
+}
