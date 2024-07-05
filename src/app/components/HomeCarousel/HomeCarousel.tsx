@@ -50,7 +50,7 @@ function CarouselScreen1(){
 
 export default function HomeCarousel() {
     return (
-        <div className="bg-[#F7F7F7B3] w-[65%] rounded-[50px] border border-[#F7921E44]">
+        <div className="bg-[#F7F7F7B3] w-[65%] mx-[68px] rounded-[50px] border border-[#F7921E44]">
             <CarouselScreen1 />
         </div>
     )

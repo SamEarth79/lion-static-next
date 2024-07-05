@@ -18,7 +18,8 @@
 
 body {
     background-color: #ffffff;    
-    padding: 28px 68px;
+    padding: 28px 0px;
+    /* max-width: 1440px; */
 }
 
 @layer utilities {

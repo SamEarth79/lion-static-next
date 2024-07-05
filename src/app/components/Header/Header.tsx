@@ -5,12 +5,13 @@ export default function Header() {
 
     const headerStyles = {
         backgroundColor: "#00000004",
-        width: "100%",
+        width: "90%",
         padding: "1rem 2rem",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        borderRadius: "20px"
+        borderRadius: "20px",
+        margin: "0 auto",
     };
 
 	return (

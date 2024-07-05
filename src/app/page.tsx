@@ -1,4 +1,4 @@
-import { AboutLC, OneStopSolution, WhyChooseLC } from "./HomeUtils";
+import { AboutLC, CompaniesWeServe, HomeDarkBanner, IdeasToReality, IndustriesWeCater, OneStopSolution, OneToOneMeetingBanner, Testimonies, WhyChooseLC } from "./components/HomeComponents/HomeUtils";
 import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
 
 export default function Home() {
@@ -10,6 +10,12 @@ export default function Home() {
             <OneStopSolution />
             <WhyChooseLC />
             <AboutLC />
+            <IdeasToReality />
+            <HomeDarkBanner />
+            <Testimonies />
+            <CompaniesWeServe />
+            <IndustriesWeCater />
+            <OneToOneMeetingBanner />
         </main>
     );
 }
