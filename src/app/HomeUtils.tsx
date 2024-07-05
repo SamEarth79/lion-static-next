@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowCapsule, Capsule } from "./components/Buttons/Buttons"
+import { ArrowCapsule, Capsule } from "@/components/Buttons/Buttons"
 
 export function OneStopSolution(){
     

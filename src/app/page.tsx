@@ -1,6 +1,5 @@
 import { AboutLC, OneStopSolution, WhyChooseLC } from "./HomeUtils";
-import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
-
+import HomeCarousel from "@/components/HomeCarousel/HomeCarousel";
 export default function Home() {
     return (
         <main className="flex flex-col my-7">

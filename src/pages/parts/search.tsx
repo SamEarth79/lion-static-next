@@ -1,34 +1,38 @@
 import Link from 'next/link';
 import { useState } from 'react';
-
+import React from 'react';
+interface ComponentData  {
+  [key: string]: string;
+}
 const SearchComponent = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState({});
+  const [searchResults, setSearchResults] = useState<ComponentData[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  
-  
+
+
   const handleSearch = async () => {
     setLoading(true);
     setError('');
-    try 
-    {
-    const res = await fetch(`https://csjo3isol4gw64twlbklytyg640zdorr.lambda-url.us-east-1.on.aws/searchmpn/${searchTerm}`);
-    console.log(res);
-    if (res.status === 404) {
-      setError('No results found.');
-      setSearchResults([]);
-    } else {
-      let data = await res.json();
-      data = JSON.parse(data);
-      setSearchResults(data);
+    try {
+      const res = await fetch(`https://csjo3isol4gw64twlbklytyg640zdorr.lambda-url.us-east-1.on.aws/searchmpn/${searchTerm}`);
+      // console.log(res);
+      if (res.status === 404) {
+        setError('No results found.');
+        setSearchResults([]);
+      } else {
+        let data = await res.json();
+        data = JSON.parse(data);
+        setSearchResults(data);
+      }
+    } catch (e) {
+      setError('An error occurred while fetching the data.');
+      console.log(e);
+    } finally {
+      setLoading(false);
     }
-  } catch (e) {
-    setError('An error occurred while fetching the data.');
-    console.log(e);
-  } finally {
-    setLoading(false);
-  }
+
+    console.log("this ",searchResults)
 
   };
 
@@ -52,9 +56,9 @@ const SearchComponent = () => {
         </button>
       </div>
       {loading && <p>Loading...</p>}
-        {error && <p>{error}</p>}
+      {error && <p>{error}</p>}
 
-      {Object.keys(searchResults).length > 0 ? (
+      {Object.entries(searchResults).length > 0 ? (
         <table className="min-w-full leading-normal mt-5">
           <thead>
             <tr>
@@ -67,21 +71,19 @@ const SearchComponent = () => {
             </tr>
           </thead>
           <tbody>
-           
-              <tr key={searchResults.mpn}>
+            {Object.entries(searchResults).map((result,index) => (
+              <tr key={''+ result[1]}>
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  {searchResults.mpn}
+                  {''+ result[1]}
                 </td>
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                    <a href={'/parts/' + searchResults.mpn}>View</a>
+                  <a style={{color:'blue'}} href={'/parts/' + result[1]}>View</a>
                 </td>
               </tr>
-
+            ))}
           </tbody>
         </table>
-      ):null
-      
-      }
+      ) :null}
     </div>
   );
 };

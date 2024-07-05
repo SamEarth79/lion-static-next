@@ -47,7 +47,7 @@ const ComponentPage : React.FC<ComponentPageProps> = ({component}:any) => {
   return (
     <>
       <Head>
-        <title>{`abc ${component.mpn}`}</title>
+        <title>{`Lion Circuits ${component.mpn}`}</title>
         {component['description'].map((desc:any, index:number) => (
           <meta key={index} name="description" content={desc} />
         ))}
