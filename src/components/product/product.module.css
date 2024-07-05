@@ -1,0 +1,28 @@
+.main {
+    width: 70%;
+    display: flex;
+    box-shadow: 0px -1px 9px 1px #bfbfbf;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.divimg{
+    display: flex;
+    width: 40%;
+    margin: 10px;
+    padding: 5px;
+}
+.product_img {
+    width: 200px;
+    height: 200px;
+
+}
+.addtocard {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    margin-left: 50px;
+    display: flex;
+    width: 26%;
+
+}
+.infokey {
+    font-weight: bold;
+}
