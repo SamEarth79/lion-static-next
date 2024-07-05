@@ -1,5 +1,5 @@
-import { AboutLC, CompaniesWeServe, HomeDarkBanner, IdeasToReality, IndustriesWeCater, OneStopSolution, OneToOneMeetingBanner, Testimonies, WhyChooseLC } from "./components/HomeComponents/HomeUtils";
-import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
+import { AboutLC, CompaniesWeServe, HomeDarkBanner, IdeasToReality, IndustriesWeCater, OneStopSolution, OneToOneMeetingBanner, Testimonies, WhyChooseLC } from "../components/HomeComponents/HomeUtils";
+import HomeCarousel from "../components/HomeCarousel/HomeCarousel";
 
 export default function Home() {
     return (
