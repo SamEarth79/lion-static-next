@@ -7,13 +7,14 @@ const SearchComponent = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   
+  
   const handleSearch = async () => {
     setLoading(true);
     setError('');
     try 
     {
-    const res = await fetch(`http://127.0.0.1:8000/searchmpn/${searchTerm}`);
-    
+    const res = await fetch(`https://csjo3isol4gw64twlbklytyg640zdorr.lambda-url.us-east-1.on.aws/searchmpn/${searchTerm}`);
+    console.log(res);
     if (res.status === 404) {
       setError('No results found.');
       setSearchResults([]);
@@ -33,7 +34,7 @@ const SearchComponent = () => {
 
   return (
     <div className="max-w-md mx-auto mt-10">
-      <div className="flex items-center border-b border-b-2 border-teal-500 py-2">
+      <div className="flex items-center border-b-2 border-teal-500 py-2">
         <input
           className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
           type="text"

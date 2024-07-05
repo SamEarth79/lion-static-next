@@ -6,7 +6,7 @@ import { Prosto_One } from "next/font/google";
 
 const ProductMain = ({data}: any) => {
 
-    console.log("props is here",data)
+    // console.log("props is here",data)
     const prop = {
         stock:data.stock,
         price:data.product_price,

@@ -33,7 +33,7 @@ type Props = {
 const AddToCart = ({props}: any) => {
   const [quanitity, setQuanity] = useState(1);
   
-  console.log("here is is price props",props)
+  // console.log("here is is price props",props)
     const  {stock,price,currency} = props
 
     return(
