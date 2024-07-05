@@ -14,7 +14,7 @@ const ProductMain = ({data}: any) => {
     }
     return (
         <div style={{marginTop:'30px'}}>
-            <div style={{display:'flex',flexFlow:'row',width:'100%'}}>
+            <div style={{display:'flex',flexFlow:'row',width:'90%',margin:'auto'}}>
             <div className={style.main}>
                 <div className={style.divimg}>
                     <img className={style.product_img} src={data.product_url} alt="Product Image" />
@@ -67,8 +67,8 @@ const ProductMain = ({data}: any) => {
 
             
 
-            <div style={{fontSize:'24px',fontWeight:'bold',margin:'8px'}}>Product Attributes</div>
-            <div className={style.main}>
+            <div style={{fontSize:'24px',fontWeight:'bold',margin:'8px auto',width:'90%'}}>Product Attributes</div>
+            <div className={style.main} style={{width:'90%',margin:'10px auto 50px auto '}}>
                 <table className="table-fixed min-w-full bg-white border border-gray-200" >
                     <thead>
                         <tr>

@@ -6,6 +6,7 @@ import ProductMain from '@/components/product/productmain';
 import Header from '@/components/Header/Header';
 import "../../app/globals.css";
 import Head from 'next/head';
+import Footer from '@/components/Footer/Footer';
 
 type Data = {
   id: number;
@@ -57,6 +58,7 @@ const ComponentPage : React.FC<ComponentPageProps> = ({component}:any) => {
       <Header />
       <ProductMain data={component}/>
       {/* Render other component details here */}
+      <Footer />
     </div>
     </>
   );

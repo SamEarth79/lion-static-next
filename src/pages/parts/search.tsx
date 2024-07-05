@@ -32,12 +32,10 @@ const SearchComponent = () => {
       setLoading(false);
     }
 
-    console.log("this ",searchResults)
-
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10">
+    <div className="max-w-md mx-auto mt-10" style={{marginTop:'100px',marginBottom:'100px'}}>
       <div className="flex items-center border-b-2 border-teal-500 py-2">
         <input
           className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
